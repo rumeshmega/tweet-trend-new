@@ -17,7 +17,7 @@ environment {
 
      stage('SonarQube analysis') {
      environment { 
-       scannerHome = tool 'rumesh-sonarqube-scanner'
+       scannerHome = tool 'rumesh-sonar-scanner'
     }
       steps {
       withSonarQubeEnv('rumesh-sonarqube-server') { // If you have configured more than one global server connection, you can specify its name
