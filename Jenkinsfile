@@ -14,11 +14,6 @@ environment {
                 sh 'mvn clean deploy'
             }
         }
-        stage("Preparation") {
-    steps {
-        cleanWs()
-    }
-}
 
 
     stage('Sonarqube') {
