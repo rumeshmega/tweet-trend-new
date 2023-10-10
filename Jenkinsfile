@@ -16,16 +16,8 @@ environment {
         }
 
 
-    stage('Sonarqube') {
-    environment {
-        scannerHome = tool 'rumesh-scanner'
-    }
-    steps {
-        withSonarQubeEnv('rumesh-sonarqube-server') {
-            sh "${scannerHome}/bin/sonar-scanner"
-        }
     }
   }
-}    
-}
+    
+
   
