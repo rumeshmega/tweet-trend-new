@@ -15,14 +15,14 @@ environment {
             }
         }
 
-    stage('SonarQube analysis') {
-    environment { 
-       scannerHome = tool 'rumesh-sonar-scanner'
+    stage('Sonarqube') {
+    environment {
+        scannerHome = tool 'rumesh-scanner'
     }
     steps {
-    withSonarQubeEnv('rumesh-sonarqube-server') { // If you have configured more than one global server connection, you can specify its name
-      sh "${scannerHome}/bin/sonar-scanner"
-    }
+        withSonarQubeEnv('rumesh-sonarqube-server') {
+            sh "${scannerHome}/bin/sonar-scanner"
+        }
     }
   }
 }    
