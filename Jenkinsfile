@@ -16,7 +16,7 @@ environment {
                  echo "-------------build Completed-------"
             }
         }
-        stage("build") {
+        stage("test") {
             steps {
                  echo "-------------Unit test Started--------"
                 sh 'mvn surefire-report:report'
